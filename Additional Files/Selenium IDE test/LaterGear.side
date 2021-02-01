@@ -1,0 +1,125 @@
+{
+  "id": "71247801-258e-4c39-8be5-205c71b48a99",
+  "version": "2.0",
+  "name": "LaterGear",
+  "url": "https://brave-goldberg-04dea0.netlify.app",
+  "tests": [{
+    "id": "ed1000e7-f84f-4f87-83a6-ae62c110f797",
+    "name": "Add item to cart",
+    "commands": [{
+      "id": "392a996f-d0b5-449a-826f-2b52706df71b",
+      "comment": "",
+      "command": "open",
+      "target": "/latergear",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75ed49d4-11f8-45df-9cf0-219bc22491b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1090x1169",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b26ef6c9-1df4-4168-ad09-db1d071b19a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ember55 > .cSC--button",
+      "targets": [
+        ["css=#ember55 > .cSC--button", "css:finder"],
+        ["xpath=//div[@id='ember55']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d65901f4-8e57-4d52-a9cd-6629c5faf640",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#ember55 .cSC--header",
+      "targets": [
+        ["css=#ember55 .cSC--header", "css:finder"],
+        ["xpath=//div[@id='ember55']/div[3]/header", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/header", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "59f0c943-5f7c-43f5-a121-d48ab2eaf133",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=#ember55 .o--media",
+      "targets": [
+        ["css=#ember55 .o--media", "css:finder"],
+        ["xpath=(//img[@alt='Fox Racing black Helmet'])[3]", "xpath:img"],
+        ["xpath=//div[@id='ember55']/div[3]/ul/li/div/figure/img", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/ul/li/div/figure/img", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "1804e3ea-1fd3-4f5c-86ea-bd7fec422a51",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ember55 .cSC--header__btn",
+      "targets": [
+        ["css=#ember55 .cSC--header__btn", "css:finder"],
+        ["xpath=//div[@id='ember55']/div[3]/header/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div[3]/header/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3d642d9-a610-4921-8553-1a5c87802834",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ember37 .o--card__mediaOverlay",
+      "targets": [
+        ["css=#ember37 .o--card__mediaOverlay", "css:finder"],
+        ["xpath=//div[@id='ember37']/a/figure/b", "xpath:idRelative"],
+        ["xpath=//div[3]/a/figure/b", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bccd1e3f-e641-42e5-b95f-95c6799ce11b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "linkText=Add To Cart",
+      "targets": [
+        ["linkText=Add To Cart", "linkText"],
+        ["css=.cDT--post__btn > .o--btn", "css:finder"],
+        ["xpath=//div[@id='ember58']/div/div/div[2]/div/div/div[4]/section/div[2]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add To Cart')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "5cf3819f-6473-48e7-83ab-16e9d71857c2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add To Cart",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1da5dc5a-4a40-414e-acf2-f35fd7fd1367",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#ember55 .o--media",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "86475cfb-4f86-41b7-b345-ca177469f0db",
+      "comment": "",
+      "command": "//click",
+      "target": "css=#ember55 .cSC--header__btn",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a255ccb2-5817-45b1-a8db-390dd6cb8bb3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ed1000e7-f84f-4f87-83a6-ae62c110f797"]
+  }],
+  "urls": ["https://brave-goldberg-04dea0.netlify.app/"],
+  "plugins": []
+}
