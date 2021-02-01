@@ -48,7 +48,7 @@ describe('webdriver.io page', () => {
          */
         expect(sizeAfterAdd - sizeBeforeAdd).toEqual(1)
         expect(itemInCartQuantity).toEqual(1)
-        
+
         // Validating the name of the expected product
         expect(itemInCartName).toHaveText(`${productName}`) // verifying the name of the expected product
     })
