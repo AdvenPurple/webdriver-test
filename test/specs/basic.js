@@ -3,7 +3,7 @@
 describe('webdriver.io page', () => {
     it('Should be able to add Fox Racing Black Helmet item to Shopping Cart', () => {
         browser.url('https://brave-goldberg-04dea0.netlify.app/latergear/')
-        
+
         const timer = 5000;
         const productName = 'Fox Racing black Helmet'
 
@@ -20,12 +20,12 @@ describe('webdriver.io page', () => {
 
         //Closing Shipping Cart
         const shoppingCartCloseButton = $('#ember55').$('.cSC--header__btn')
-        shoppingCartCloseButton.waitForClickable({timeout: timer});
+        shoppingCartCloseButton.waitForClickable({ timeout: timer });
         shoppingCartCloseButton.click()
 
         // Selecting item from the list and clicking it
         const hardcodedHelmetItem = $('#ember37')
-        hardcodedHelmetItem.waitForClickable({timeout: timer});
+        hardcodedHelmetItem.waitForClickable({ timeout: timer });
         hardcodedHelmetItem.click()
 
         // Adding Item do Cart
@@ -38,12 +38,18 @@ describe('webdriver.io page', () => {
         const shoppingCartListAfterAdd = $('.cSC--list').$$('li')
         const sizeAfterAdd = shoppingCartListAfterAdd.length
 
-
-        // Validating that there is only 1 item added
-        expect(sizeAfterAdd - sizeBeforeAdd).toEqual(1)
-        
         // Validating that said one item is the correct one
         const itemInCartName = shoppingCartListAfterAdd[0].$('.cSC--li__title')
-        expect(itemInCartName).toHaveText(`${productName}`)
+        const itemInCartQuantity = parseInt(shoppingCartListAfterAdd[0].$('.cSC--li__quantity').getText())
+
+        /*
+            Counting <li> items inside the <ul>
+            Counting how many instances of the product were added
+         */
+        expect(sizeAfterAdd - sizeBeforeAdd).toEqual(1)
+        expect(itemInCartQuantity).toEqual(1)
+        
+        // Validating the name of the expected product
+        expect(itemInCartName).toHaveText(`${productName}`) // verifying the name of the expected product
     })
 })
