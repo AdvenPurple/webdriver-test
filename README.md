@@ -13,7 +13,7 @@ Automated test that:
 
 ## Contents
 - test/specs folder contains the script that runs a test 
-- test/media folder contains a recording of the automated test running and an image of the test's report
+- Additional Files folder contains evidence of the Webdriver test run and an independent test created using the Selenium IDE Chrome extension
 
 ## Usage
 - Download folder
